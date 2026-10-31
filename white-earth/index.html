@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Community, housing and regional economy data for White Earth Nation.">
+<title>White Earth Nation | CEDS Evidence Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='16' height='32' fill='%23a86b12'/%3E%3Crect x='16' width='16' height='32' fill='%231e6e74'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-root="../" data-page="white-earth" data-nation="White Earth">
+<a class="skip-link" href="#main">Skip to content</a>
+<header data-site-header></header>
+<main id="main">
+<div class="wrap">
+  <section class="page-head">
+    <h1>White Earth Nation</h1>
+    <p class="lead">Conditions on the White Earth Reservation and off-reservation trust land in northwestern Minnesota, with a regional economy traced across three counties.</p>
+    <p class="geo-note">Community indicators: White Earth Reservation and Off-Reservation Trust Land, all residents. Regional indicators: Becker, Clearwater and Mahnomen counties.</p>
+    <nav class="nation-switch" aria-label="Switch Nation">
+      <a href="../cherokee/">Cherokee Nation</a>
+      <a href="../white-earth/" aria-current="page">White Earth Nation</a>
+    </nav>
+  </section>
+
+  <section class="section" id="overview" aria-labelledby="overview-title">
+    <header><h2 id="overview-title">At a glance</h2>
+      <p>American Community Survey 5-year estimates for <span data-period>2020–2024</span>.</p></header>
+    <div class="figures" id="figures"><p class="loading">Loading…</p></div>
+  </section>
+
+  <section class="section" id="map" aria-labelledby="map-title">
+    <div class="grid-2">
+      <div>
+        <header><h2 id="map-title">Where the data comes from</h2></header>
+        <p>The White Earth Reservation covers about 2,800 km² of land, including all of Mahnomen County and parts of Becker and Clearwater counties, a landscape of lakes, wetlands, forest and farmland. Small population counts mean wider margins of error.</p>
+        <p>The outlined area is the Census tribal geography used for community indicators. The shaded counties are the reference region used for jobs, businesses and energy.</p>
+        <p class="source">Boundaries: U.S. Census Bureau TIGER/Line 2025, simplified for display. Boundaries are statistical, not legal or ownership lines.</p>
+      </div>
+      <div class="figure"><div id="map-chart" class="chart"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="trends" aria-labelledby="trends-h">
+    <header><h2 id="trends-h">Community conditions over time</h2>
+      <p>Each point is a 5-year estimate; the shaded band is the 90% margin of error. Adjacent periods share four years of data.</p></header>
+    <div class="figure">
+      <div class="seg" id="trend-seg" role="group" aria-label="Choose an indicator"></div>
+      <h3 id="trend-title">Poverty</h3>
+      <p class="sub" id="trend-def"></p>
+      <label class="sub"><input type="checkbox" id="trend-compare"> Compare with Cherokee Nation</label>
+      <ul class="legend" id="trend-legend"></ul>
+      <div id="trend-chart" class="chart"></div>
+      <p class="source">Source: U.S. Census Bureau, American Community Survey 5-year estimates, 2014–2018 through 2020–2024. Income is in each release year's dollars and is not adjusted for inflation.</p>
+    </div>
+  </section>
+
+  <section class="section" id="housing" aria-labelledby="housing-h">
+    <header><h2 id="housing-h">Housing</h2></header>
+    <div class="grid-2">
+      <div class="figure">
+        <h3>Why vacant homes are vacant</h3>
+        <p class="sub" id="vacancy-sub"></p>
+        <div id="vacancy-chart" class="chart"></div>
+        <p class="source">Source: ACS table B25004, <span data-period>2020–2024</span>. Lines show 90% margins of error.</p>
+      </div>
+      <div class="figure">
+        <h3>Housing cost burden</h3>
+        <p class="sub">Share of households spending at least 30% (or 50%) of income on housing.</p>
+        <div id="burden-chart" class="chart"></div>
+        <p class="source">Source: ACS tables B25070 and B25091, <span data-period>2020–2024</span>. Households without a computable ratio are excluded.</p>
+      </div>
+      <div class="figure">
+        <h3>When homes were built</h3>
+        <p class="sub" id="age-sub"></p>
+        <div id="age-chart" class="chart"></div>
+        <p class="source">Source: ACS table B25034, <span data-period>2020–2024</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="economy" aria-labelledby="economy-h">
+    <header><h2 id="economy-h">Regional economy</h2>
+      <p>These figures cover Becker, Clearwater and Mahnomen counties. They describe the regional economy around the reservation, not Tribal employment.</p></header>
+    <div class="grid-2">
+      <div class="figure">
+        <h3>Business establishments by industry</h3>
+        <p class="sub" id="industry-sub"></p>
+        <div id="industry-chart" class="chart"></div>
+        <p class="source">Source: U.S. Census Bureau, County Business Patterns. Industries shown have complete county coverage in both years. Counts are establishments, not jobs or Tribal businesses.</p>
+      </div>
+      <div>
+        <div class="figure">
+          <h3>Jobs located in the region</h3>
+          <div id="jobs-chart" class="chart"></div>
+          <p class="source">Source: BLS Quarterly Census of Employment and Wages, annual averages, all ownerships.</p>
+        </div>
+        <div class="figure" style="margin-top: var(--gap)">
+          <h3>Unemployment rate</h3>
+          <div id="unemp-chart" class="chart"></div>
+          <p class="source">Source: BLS Local Area Unemployment Statistics, average of monthly values.</p>
+        </div>
+      </div>
+      <div class="figure">
+        <h3>Where jobs and workers meet, <span id="commute-year"></span></h3>
+        <p class="sub">Counts are jobs, not people. Flows to or from other states are not included.</p>
+        <div class="table-wrap"><table id="commute-table"><thead><tr><th>Measure</th><th class="num">Jobs</th></tr></thead><tbody></tbody></table></div>
+        <p class="source">Source: U.S. Census Bureau LEHD Origin-Destination Employment Statistics (LODES), main files.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="featured" aria-labelledby="featured-h">
+    <header><h2 id="featured-h">What sits behind the vacancy rate?</h2></header>
+    <div class="grid-2">
+      <div>
+        <p id="feature-summary" class="loading">Loading…</p>
+        <div class="caveat"><p>A vacant unit is not an available home. The survey cannot show condition, ownership, water and sewer service, or whether a unit could be occupied, and seasonal homes may be privately owned.</p></div>
+        <p id="feature-link" style="margin-top:1rem"></p>
+      </div>
+      <div class="figure">
+        <h3>Vacant housing units by reason</h3>
+        <ul class="legend" id="feature-legend"></ul>
+        <div id="feature-chart" class="chart"></div>
+        <p class="source">Source: ACS table B25004, 2020–2024. Other reasons combine for rent, for sale, rented or sold but unoccupied, migrant worker housing and other vacant.</p>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+<footer data-site-footer></footer>
+<script src="../assets/vendor/d3.v7.9.0.min.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/charts.js"></script>
+<script src="../assets/js/maps.js"></script>
+<script src="../assets/js/navigator.js"></script>
+<script src="../assets/js/pages/nation.js"></script>
+</body>
+</html>

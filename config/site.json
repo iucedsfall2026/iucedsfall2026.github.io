@@ -1,0 +1,69 @@
+{
+  "_how_to_edit": "Change the values below and push. Set \"show\" to false to hide a person. Leave email blank to hide it. To add a photo, put a square image in assets/img/people/ and set \"photo\" to its file name, for example \"deborah.jpg\".",
+  "project": {
+    "title": "CEDS Evidence Atlas",
+    "course": "Data Science Integrated Project (DSIP), Indiana University",
+    "term": "Fall 2026",
+    "disclaimer": "Built by Indiana University students from public federal data. It is not an official publication of Cherokee Nation or White Earth Nation, and nothing here is an adopted plan or recommendation."
+  },
+  "contact": {
+    "email": "iucedsfall2026@gmail.com",
+    "form_endpoint": ""
+  },
+  "team": [
+    {
+      "name": "Deborah “Sefunmi” Akin-Olukunle",
+      "initials": "DA",
+      "role": "Data visualization and web development",
+      "bio": "Designed and built the CEDS Evidence Atlas: its dashboards, maps, scenario calculators and site guide.",
+      "email": "",
+      "photo": "",
+      "show": true
+    },
+    {
+      "name": "Javier Arturo Aguilar Argueta",
+      "initials": "JA",
+      "role": "Data pipeline and analysis",
+      "bio": "Built the data pipeline that gathers, validates and models the federal sources behind every figure on this site.",
+      "email": "",
+      "photo": "",
+      "show": true
+    }
+  ],
+  "instructors": [
+    {
+      "name": "David John Wild, PhD",
+      "initials": "DW",
+      "role": "Lead Instructor",
+      "titles": [
+        "Crisis Informatics Track Director",
+        "Director, Crisis Technologies Innovation Lab (CTIL)",
+        "Director, Integrative Data Science Lab (IDSL)"
+      ],
+      "organization": "Indiana University",
+      "email": "",
+      "photo": "",
+      "show": true
+    },
+    {
+      "name": "Sanjana Jairam",
+      "initials": "SJ",
+      "role": "Associate Instructor",
+      "titles": [],
+      "organization": "Indiana University",
+      "email": "",
+      "photo": "",
+      "show": true
+    }
+  ],
+  "sponsor": {
+    "name": "Kyle Stirling",
+    "initials": "KS",
+    "role": "Project Sponsor",
+    "titles": [],
+    "organization": "",
+    "email": "",
+    "photo": "",
+    "show": true
+  }
+}

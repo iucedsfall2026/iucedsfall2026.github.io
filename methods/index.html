@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Sources, geographies, uncertainty and limitations.">
+<title>Data and methods | CEDS Evidence Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='16' height='32' fill='%23a86b12'/%3E%3Crect x='16' width='16' height='32' fill='%231e6e74'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-root="../" data-page="methods">
+<a class="skip-link" href="#main">Skip to content</a>
+<header data-site-header></header>
+<main id="main">
+<div class="wrap">
+  <section class="page-head">
+    <h1>Data and methods</h1>
+    <p class="lead">Where every number comes from, what geography it describes, and what it cannot tell you.</p>
+  </section>
+
+  <section class="section" aria-labelledby="src-h">
+    <header><h2 id="src-h">Sources</h2></header>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Source</th><th>What it measures</th><th>Period used</th><th>Geography</th></tr></thead>
+      <tbody>
+        <tr><td>American Community Survey (ACS) 5-year estimates, U.S. Census Bureau</td><td>Population, income, poverty, education, work, housing, broadband subscription</td><td>2014–2018 to 2020–2024</td><td>Census tribal areas</td></tr>
+        <tr><td>County Business Patterns (CBP), U.S. Census Bureau</td><td>Business establishments by industry</td><td>2018 and 2023</td><td>Reference counties</td></tr>
+        <tr><td>Quarterly Census of Employment and Wages (QCEW), BLS</td><td>Jobs covered by unemployment insurance</td><td>2018–2025</td><td>Reference counties</td></tr>
+        <tr><td>Local Area Unemployment Statistics (LAUS), BLS</td><td>Labor force and unemployment</td><td>2018–2024</td><td>Reference counties</td></tr>
+        <tr><td>LEHD Origin-Destination Employment Statistics (LODES), U.S. Census Bureau</td><td>Where jobs are located and where job holders live</td><td>2018–2023</td><td>Reference counties, in-state flows</td></tr>
+        <tr><td>Form EIA-860, U.S. Energy Information Administration</td><td>Operable and proposed generators</td><td>2018–2025</td><td>Reference counties</td></tr>
+        <tr><td>National Risk Index, FEMA</td><td>Hazard risk, expected loss, vulnerability, resilience</td><td>December 2025 release</td><td>Reference counties</td></tr>
+        <tr><td>National Broadband Map, FCC</td><td>Locations with 100/20 Mbps service available</td><td>As of December 31, 2025</td><td>Tribal areas and counties</td></tr>
+        <tr><td>Annual National Land Cover Database, USGS</td><td>Land cover class</td><td>2018–2025</td><td>Census tribal areas</td></tr>
+        <tr><td>TIGER/Line, U.S. Census Bureau</td><td>Boundaries and mapped roads</td><td>2025</td><td>Tribal areas and counties</td></tr>
+        <tr><td>Annual Technology Baseline, NREL</td><td>Battery storage reference life and operating cost</td><td>2025</td><td>National benchmark</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section class="section" aria-labelledby="geo-h">
+    <header><h2 id="geo-h">Two kinds of geography</h2></header>
+    <div class="grid-2">
+      <div><h3>Census tribal areas</h3><p>Community indicators use the Cherokee OTSA (Oklahoma Tribal Statistical Area) and the White Earth Reservation with its off-reservation trust land. They count every resident, whether or not they are a Tribal citizen, and miss citizens living elsewhere.</p></div>
+      <div><h3>Reference counties</h3><p>Economic and energy indicators use the counties that overlap each Nation: 14 in Oklahoma and 3 in Minnesota. County totals describe the regional economy. They are not Tribal employment, Tribal businesses or Tribal energy assets.</p></div>
+    </div>
+    <h3 style="margin-top:1.5rem">Reference counties</h3>
+    <div class="table-wrap"><table id="xwalk"><thead><tr><th>Nation</th><th>Geography</th><th>Type</th><th>How it relates</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="section" aria-labelledby="unc-h">
+    <header><h2 id="unc-h">Uncertainty</h2></header>
+    <p>ACS values are survey estimates. Each comes with a 90% margin of error, shown as ± values and as shaded bands in charts. Margins for derived shares were approximated using Census Bureau formulas for ratios and proportions.</p>
+    <p>A 5-year estimate pools five years of responses, so consecutive estimates share four years of data. Treat movement between adjacent periods with caution, and compare non-overlapping periods (for example 2014–2018 with 2020–2024) before calling something a trend.</p>
+    <p>Small populations produce wide margins. White Earth estimates are less precise than Cherokee estimates for this reason.</p>
+  </section>
+
+  <section class="section" id="withheld" aria-labelledby="wh-h">
+    <header><h2 id="wh-h">What is not shown, and why</h2></header>
+    <p><strong>Federal funding totals are withheld.</strong> The pipeline searched USAspending.gov by recipient name. Those matches have not been verified, cover many years at once, and include contracts and assistance that may not reach either Nation. Publishing the totals would invite people to quote them as Tribal funding, so they stay in the private research repository until they can be verified.</p>
+    <p><strong>No facility-level data.</strong> Load, outage, tariff, property condition and household-level information require authorization from each Nation and were not collected.</p>
+    <p><strong>No targets or rankings.</strong> Targets, owners and priorities belong to each Nation and are left blank on purpose.</p>
+  </section>
+
+  <section class="section" aria-labelledby="repro-h">
+    <header><h2 id="repro-h">How this site is built</h2></header>
+    <p>The analysis pipeline lives in a private repository. It downloads and checks each source, builds a set of canonical tables, and runs validation tests. A single export script then copies the public-safe subset into this site's <code>data</code> folder, so every figure here traces back to a pipeline table.</p>
+    <p>Charts are drawn in the browser with D3 from those exported files. Nothing is typed into the pages by hand, so refreshing the data updates every number at once.</p>
+    <p id="data-stamp" class="source"></p>
+  </section>
+</div>
+</main>
+<footer data-site-footer></footer>
+<script src="../assets/vendor/d3.v7.9.0.min.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/charts.js"></script>
+<script src="../assets/js/maps.js"></script>
+<script src="../assets/js/navigator.js"></script>
+<script src="../assets/js/pages/methods.js"></script>
+</body>
+</html>

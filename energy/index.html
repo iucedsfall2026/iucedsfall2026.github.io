@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Generation capacity, proposed generators, hazard risk, broadband and land cover.">
+<title>Energy and infrastructure | CEDS Evidence Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='16' height='32' fill='%23a86b12'/%3E%3Crect x='16' width='16' height='32' fill='%231e6e74'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-root="../" data-page="energy">
+<a class="skip-link" href="#main">Skip to content</a>
+<header data-site-header></header>
+<main id="main">
+<div class="wrap">
+  <section class="page-head">
+    <h1>Energy and infrastructure</h1>
+    <p class="lead">The physical context around both Nations: where electricity is generated, what is being built, which counties face the most hazard risk, and how well homes are connected.</p>
+    <p class="geo-note">County figures cover the 14 Cherokee reference counties in Oklahoma and the 3 White Earth reference counties in Minnesota. A plant located in a county is not evidence of Tribal ownership or of power available to the Nation.</p>
+  </section>
+
+  <section class="section" id="capacity" aria-labelledby="capacity-h">
+    <header><h2 id="capacity-h">Operating generation capacity</h2>
+      <p id="capacity-intro"></p></header>
+    <div class="grid-2">
+      <div class="figure">
+        <h3>Capacity by county and fuel, <span class="ey"></span></h3>
+        <ul class="legend" id="fuel-legend"></ul>
+        <div id="capacity-chart" class="chart"></div>
+        <p class="source">Source: U.S. Energy Information Administration, Form EIA-860, operable generators. Nameplate capacity, not actual generation.</p>
+      </div>
+      <div class="figure">
+        <h3>Capacity in the Cherokee reference counties over time</h3>
+        <ul class="legend" id="fuel-trend-legend"></ul>
+        <div id="capacity-trend" class="chart"></div>
+        <p class="source">Source: EIA-860, 2018–2025 annual releases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proposed" aria-labelledby="proposed-h">
+    <header><h2 id="proposed-h">Proposed generators</h2>
+      <p id="proposed-intro"></p></header>
+    <div class="table-wrap"><table id="proposed-table">
+      <thead><tr><th>Project</th><th>County</th><th>Fuel</th><th class="num">Capacity</th><th>Status reported to EIA</th><th>Inside Census tribal area</th></tr></thead>
+      <tbody></tbody></table></div>
+    <p class="source">Source: EIA-860 proposed generators, <span class="py"></span> release. Proposed projects can be delayed, changed or cancelled.</p>
+  </section>
+
+  <section class="section" id="hazard" aria-labelledby="hazard-h">
+    <header><h2 id="hazard-h">Natural hazard risk</h2>
+      <p>FEMA's National Risk Index combines expected annual losses from 18 hazards with social vulnerability and community resilience. The score is a national percentile: 80 means higher risk than 80% of U.S. counties.</p></header>
+    <div class="grid-2">
+      <div class="figure">
+        <h3>Risk score by county</h3>
+        <div id="hazard-chart" class="chart"></div>
+        <p class="source">Source: FEMA National Risk Index, <span class="nri"></span>.</p>
+      </div>
+      <div class="figure">
+        <h3>Ratings behind the score</h3>
+        <div class="table-wrap"><table id="hazard-table"><thead><tr><th>County</th><th class="num">Expected annual loss</th><th>Social vulnerability</th><th>Community resilience</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="broadband" aria-labelledby="broadband-h">
+    <header><h2 id="broadband-h">Broadband</h2>
+      <p>Two different measures: whether 100/20 Mbps service is available at a location (FCC), and whether a household actually subscribes to any internet service (ACS).</p></header>
+    <div class="grid-2">
+      <div>
+        <div class="figures" id="bb-figures"></div>
+        <p class="source">Sources: FCC National Broadband Map, residential fixed terrestrial service of at least 100/20 Mbps, as of <span class="fcc"></span>; ACS table B28002, <span data-period>2020–2024</span>.</p>
+      </div>
+      <div class="figure">
+        <h3>Locations with 100/20 Mbps available, by county</h3>
+        <div id="bb-chart" class="chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="land" aria-labelledby="land-h">
+    <header><h2 id="land-h">Land cover and roads</h2>
+      <p>What covers the land inside each Census tribal area, and how dense the mapped road network is.</p></header>
+    <div class="grid-2">
+      <div class="figure">
+        <h3>Land cover, <span class="ly"></span></h3>
+        <ul class="legend" id="land-legend"></ul>
+        <div id="land-chart" class="chart"></div>
+        <p class="source">Source: USGS Annual National Land Cover Database (NLCD), 30 m pixels, summarized to 2025 Census boundaries. Land cover is not land ownership or developable land.</p>
+      </div>
+      <div>
+        <div class="table-wrap"><table id="roads-table"><thead><tr><th>Area</th><th class="num">Land and water area</th><th class="num">Mapped roads</th><th class="num">Road density</th></tr></thead><tbody></tbody></table></div>
+        <p class="source">Source: U.S. Census Bureau TIGER/Line roads, 2025. Mapped length only; says nothing about road condition, travel time or ownership.</p>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+<footer data-site-footer></footer>
+<script src="../assets/vendor/d3.v7.9.0.min.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/charts.js"></script>
+<script src="../assets/js/maps.js"></script>
+<script src="../assets/js/navigator.js"></script>
+<script src="../assets/js/pages/energy.js"></script>
+</body>
+</html>

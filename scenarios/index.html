@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Battery storage and housing cost calculators.">
+<title>Scenarios | CEDS Evidence Atlas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='16' height='32' fill='%23a86b12'/%3E%3Crect x='16' width='16' height='32' fill='%231e6e74'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-root="../" data-page="scenarios">
+<a class="skip-link" href="#main">Skip to content</a>
+<header data-site-header></header>
+<main id="main">
+<div class="wrap">
+  <section class="page-head">
+    <h1>Scenarios</h1>
+    <p class="lead">Two calculators that show how much an answer depends on its assumptions. Move the inputs and watch the threshold change.</p>
+    <div class="caveat" style="margin-top:1.25rem"><p>These are illustrations of method. Inputs marked <span class="tag reference">reference</span> come from published benchmarks; inputs marked <span class="tag synthetic">illustrative</span> were invented to demonstrate the calculation. Neither calculator ranks or recommends a project.</p></div>
+  </section>
+
+  <section class="section" id="bess" aria-labelledby="bess-h" style="--nation:var(--cherokee);--nation-text:var(--cherokee-text);--nation-wash:var(--cherokee-wash)">
+    <header><h2 id="bess-h">Battery storage break-even, Cherokee Nation</h2>
+      <p>What share of its upfront cost would a battery storage system have to return every year, through savings or avoided losses, just to pay for itself? And how much more would a distributed design (several small batteries instead of one central one) need to return?</p></header>
+    <div class="calc">
+      <form class="figure" id="bess-form" onsubmit="return false">
+        <div class="field"><label for="b-life">Project life <output id="b-life-o"></output></label>
+          <input type="range" id="b-life" min="5" max="15" step="1"><div class="hint"><span class="tag reference">reference</span> 15 years in NREL's 2025 Annual Technology Baseline. Capped at 15 years, the reference life.</div></div>
+        <div class="field"><label for="b-rate">Discount rate <output id="b-rate-o"></output></label>
+          <input type="range" id="b-rate" min="0" max="0.15" step="0.005"><div class="hint"><span class="tag synthetic">illustrative</span> 7% default. Not a financing quote or a community preference.</div></div>
+        <div class="field"><label for="b-fom">Fixed operations and maintenance, per year <output id="b-fom-o"></output></label>
+          <input type="range" id="b-fom" min="0" max="0.1" step="0.005"><div class="hint"><span class="tag reference">reference</span> 4% of capital per year in the 2025 Annual Technology Baseline.</div></div>
+        <div class="field"><label for="b-prem">Distributed design capital premium <output id="b-prem-o"></output></label>
+          <input type="range" id="b-prem" min="0" max="1" step="0.05"><div class="hint"><span class="tag synthetic">illustrative</span> 20% default. Not a quote or observed premium.</div></div>
+        <button type="button" class="reset" id="bess-reset">Reset to defaults</button>
+      </form>
+      <div>
+        <div class="result">
+          <div class="big" id="bess-out"></div>
+          <p id="bess-text"></p>
+        </div>
+        <div class="figure">
+          <h3>Break-even share by project life</h3>
+          <div id="bess-chart" class="chart"></div>
+          <p class="source">Annual break-even share = capital recovery factor (life, rate) + fixed O&amp;M share. Same formula as the project's pipeline.</p>
+        </div>
+      </div>
+    </div>
+    <details class="notes"><summary>What this leaves out</summary><ul>
+      <li>Charging costs, round-trip losses, dispatch rules, replacement, interconnection, taxes and incentives.</li>
+      <li>Any measured outage, load or tariff data for a real facility. Those require an authorized facility review.</li>
+      <li>Whether a central and a distributed system deliver the same service. The comparison assumes they do.</li>
+    </ul></details>
+  </section>
+
+  <section class="section" id="housing" aria-labelledby="housing-h" style="--nation:var(--whiteearth);--nation-text:var(--whiteearth-text);--nation-wash:var(--whiteearth-wash)">
+    <header><h2 id="housing-h">Rehabilitation or rental assistance, White Earth Nation</h2>
+      <p>For one household and the same quality of housing, how much could a rehabilitation cost upfront before paying ongoing rental assistance becomes the cheaper choice over the same period?</p></header>
+    <div class="calc">
+      <form class="figure illustrative" id="house-form" onsubmit="return false">
+        <div class="field"><label for="h-years">Comparison period <output id="h-years-o"></output></label>
+          <input type="range" id="h-years" min="5" max="40" step="1"><div class="hint"><span class="tag synthetic">illustrative</span> 20 years.</div></div>
+        <div class="field"><label for="h-rate">Discount rate <output id="h-rate-o"></output></label>
+          <input type="range" id="h-rate" min="0" max="0.15" step="0.005"><div class="hint"><span class="tag synthetic">illustrative</span> 7%.</div></div>
+        <div class="field"><label for="h-assist">Rental assistance per year <output id="h-assist-o"></output></label>
+          <input type="range" id="h-assist" min="0" max="40000" step="500"><div class="hint"><span class="tag synthetic">illustrative</span> $18,000 per year.</div></div>
+        <div class="field"><label for="h-upkeep">Rehabilitated home upkeep per year <output id="h-upkeep-o"></output></label>
+          <input type="range" id="h-upkeep" min="0" max="20000" step="250"><div class="hint"><span class="tag synthetic">illustrative</span> $5,000 per year.</div></div>
+        <div class="field"><label for="h-rehab">Rehabilitation cost to test <output id="h-rehab-o"></output></label>
+          <input type="range" id="h-rehab" min="0" max="400000" step="5000"><div class="hint"><span class="tag synthetic">illustrative</span> $150,000.</div></div>
+        <button type="button" class="reset" id="house-reset">Reset to defaults</button>
+      </form>
+      <div>
+        <div class="result">
+          <div class="big" id="house-out"></div>
+          <p id="house-text"></p>
+        </div>
+        <div class="figure">
+          <h3>Break-even rehabilitation cost by comparison period</h3>
+          <div id="house-chart" class="chart"></div>
+          <p class="source">Break-even cost = (assistance per year − upkeep per year) × annuity factor (period, rate). Same formula as the project's pipeline.</p>
+        </div>
+      </div>
+    </div>
+    <details class="notes"><summary>What this leaves out</summary><ul>
+      <li>Real bids, budgets, eligible program costs and property condition. None were available to this project.</li>
+      <li>Whether the household, location, tenure and quality of housing are actually equivalent between the two options.</li>
+      <li>For scale, the HUD 2025 total development cost ceilings recorded in the pipeline run from $438,741 (1 bedroom) to $644,506 (5 bedrooms). These are regulatory limits, not construction costs.</li>
+    </ul></details>
+  </section>
+</div>
+</main>
+<footer data-site-footer></footer>
+<script src="../assets/vendor/d3.v7.9.0.min.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/charts.js"></script>
+<script src="../assets/js/maps.js"></script>
+<script src="../assets/js/navigator.js"></script>
+<script src="../assets/js/pages/scenarios.js"></script>
+</body>
+</html>
